@@ -1,15 +1,19 @@
 {
   "name": "vscode-coding-tracker",
-  "displayName": "vscode-coding-tracker",
-  "description": "",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.105.0"
-  },
+  "displayName": "Coding Tracker",
+  "description": "A VS Code extension that tracks coding session time and syncs with a Laravel API.",
+  "publisher": "Rati Rukhadze",
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:vscode-coding-tracker.startTracking"
+  ],
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "version": "0.0.1",
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
