@@ -2,7 +2,31 @@
   "name": "vscode-coding-tracker",
   "displayName": "Coding Tracker",
   "description": "A VS Code extension that tracks coding session time and syncs with a Laravel API.",
-  "publisher": "Rati Rukhadze",
+  "publisher": "RatiRukhadze",
+  "version": "0.0.1",
+  "license": "MIT",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "icon": "assets/time-tracker.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Heyosseus/vscode-coding-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Heyosseus/vscode-coding-tracker/issues"
+  },
+  "homepage": "https://github.com/Heyosseus/vscode-coding-tracker#readme",
+  "keywords": [
+    "time tracking",
+    "productivity",
+    "coding time",
+    "session tracking",
+    "laravel",
+    "api",
+    "statistics"
+  ],
   "categories": [
     "Other"
   ],
@@ -13,7 +37,6 @@
   "engines": {
     "vscode": "^1.105.0"
   },
-  "version": "0.0.1",
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -73,21 +96,22 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.105.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
+    "@types/vscode": "^1.105.0",
     "@typescript-eslint/eslint-plugin": "^8.45.0",
     "@typescript-eslint/parser": "^8.45.0",
-    "eslint": "^9.36.0",
-    "typescript": "^5.9.3",
-    "ts-loader": "^9.5.4",
-    "webpack": "^5.102.0",
-    "webpack-cli": "^6.0.1",
     "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.6.2",
+    "eslint": "^9.36.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.102.0",
+    "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "node-fetch": "^2.7.0",
-    "@types/node-fetch": "^2.6.4"
+    "@types/node-fetch": "^2.6.4",
+    "node-fetch": "^2.7.0"
   }
 }
