@@ -191,7 +191,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Command implementations
   const showStatsCommand = vscode.commands.registerCommand(
-    'vscode-coding-tracker.showStats',
+    'laravel-coding-time-tracker.showStats',
     async () => {
       const totalTime =
         batch.reduce((sum, item) => sum + item.duration_seconds, 0) +
@@ -211,7 +211,7 @@ Current Session: ${Math.floor(activeAccumulator / 60)}m`;
   );
 
   const resetStatsCommand = vscode.commands.registerCommand(
-    'vscode-coding-tracker.resetStats',
+    'laravel-coding-time-tracker.resetStats',
     async () => {
       const result = await vscode.window.showWarningMessage(
         'Are you sure you want to reset all local coding statistics? This action cannot be undone.',
@@ -232,11 +232,11 @@ Current Session: ${Math.floor(activeAccumulator / 60)}m`;
   );
 
   const openSettingsCommand = vscode.commands.registerCommand(
-    'vscode-coding-tracker.openSettings',
+    'laravel-coding-time-tracker.openSettings',
     () => {
       vscode.commands.executeCommand(
         'workbench.action.openSettings',
-        '@ext:Rati Rukhadze.vscode-coding-tracker'
+        '@ext:RatiRukhadze.laravel-coding-time-tracker'
       );
     }
   );

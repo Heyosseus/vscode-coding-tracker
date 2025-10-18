@@ -1,15 +1,15 @@
 {
-  "name": "vscode-coding-tracker",
-  "displayName": "Coding Tracker",
-  "description": "A VS Code extension that tracks coding session time and syncs with a Laravel API.",
+  "name": "laravel-coding-time-tracker",
+  "displayName": "Laravel Coding Time Tracker",
+  "description": "A VS Code extension that tracks coding session time and syncs with a Laravel API backend.",
   "publisher": "RatiRukhadze",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "license": "MIT",
   "galleryBanner": {
     "color": "#C80000",
     "theme": "dark"
   },
-  "icon": "assets/time-tracker.png",
+  "icon": "/assets/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/Heyosseus/vscode-coding-tracker.git"
@@ -31,8 +31,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished",
-    "onCommand:vscode-coding-tracker.startTracking"
+    "onStartupFinished"
   ],
   "engines": {
     "vscode": "^1.105.0"
@@ -41,19 +40,19 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-coding-tracker.showStats",
+        "command": "laravel-coding-time-tracker.showStats",
         "title": "Show Coding Statistics",
-        "category": "Coding Tracker"
+        "category": "Laravel Coding Tracker"
       },
       {
-        "command": "vscode-coding-tracker.resetStats",
+        "command": "laravel-coding-time-tracker.resetStats",
         "title": "Reset Local Statistics",
-        "category": "Coding Tracker"
+        "category": "Laravel Coding Tracker"
       },
       {
-        "command": "vscode-coding-tracker.openSettings",
+        "command": "laravel-coding-time-tracker.openSettings",
         "title": "Open Settings",
-        "category": "Coding Tracker"
+        "category": "Laravel Coding Tracker"
       }
     ],
     "configuration": {
