@@ -18,10 +18,48 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-coding-tracker.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-coding-tracker.showStats",
+        "title": "Show Coding Statistics",
+        "category": "Coding Tracker"
+      },
+      {
+        "command": "vscode-coding-tracker.resetStats",
+        "title": "Reset Local Statistics",
+        "category": "Coding Tracker"
+      },
+      {
+        "command": "vscode-coding-tracker.openSettings",
+        "title": "Open Settings",
+        "category": "Coding Tracker"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Coding Tracker",
+      "properties": {
+        "codingTracker.apiUrl": {
+          "type": "string",
+          "description": "The API URL to send coding session data to",
+          "default": ""
+        },
+        "codingTracker.apiKey": {
+          "type": "string",
+          "description": "The API key for authentication",
+          "default": ""
+        },
+        "codingTracker.idleMinutes": {
+          "type": "number",
+          "description": "Number of minutes before considering the user idle",
+          "default": 5,
+          "minimum": 1
+        },
+        "codingTracker.batchSeconds": {
+          "type": "number",
+          "description": "Number of seconds to accumulate before sending a batch",
+          "default": 300,
+          "minimum": 60
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
@@ -47,5 +85,9 @@
     "webpack-cli": "^6.0.1",
     "@vscode/test-cli": "^0.0.11",
     "@vscode/test-electron": "^2.5.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0",
+    "@types/node-fetch": "^2.6.4"
   }
 }
